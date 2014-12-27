@@ -1,0 +1,52 @@
+
+<div class="jumbotron text-center">
+	<h2>Student Registration</h2>
+      <form>
+         <p><input type="text"  placeholder="ACF ID" ng-model="studentRegisterData.acfId"></p>
+        <p><input type="text"  placeholder="First Name" ng-model="studentRegisterData.fname"></p>
+        <p><input type="text"  placeholder="Last Name" ng-model="studentRegisterData.lname"></p>
+        <p><input type="text"  placeholder="Phone Number" ng-model="studentRegisterData.pnumber"></p>
+        <p><input type="text"  placeholder="Username or Email" ng-model="studentRegisterData.email"></p>
+        <p><input type="password" name="password" value="" placeholder="Password" ng-model="studentRegisterData.password"></p>
+    <p class="submit"><input type="submit" value="Register" ng-click="registerStudent()"></p>
+      </form>
+
+</div>
+
+
+<div class="jumbotron text-center">
+  <h2>Editor Registration</h2>
+      <form>
+          <p><input type="text"  placeholder="First Name" ng-model="editorRegisterData.fname"></p>
+        <p><input type="text"  placeholder="Last Name" ng-model="editorRegisterData.lname"></p>
+        <p><input type="text"  placeholder="Phone Number" ng-model="editorRegisterData.pnumber"></p>
+        <p><input type="text"  placeholder="Username or Email" ng-model="editorRegisterData.email"></p>
+        <p><input type="password" name="password" value="" placeholder="Password" ng-model="editorRegisterData.password"></p>
+   <p class="submit"><input type="submit" value="Register" ng-click="registerEditor()"></p>
+      </form>
+
+</div>
+
+<div class="jumbotron text-center">
+  <h2>ACF Member Registration</h2>
+      <form>
+        <p><input type="text"  placeholder="ACF Id" ng-model="acfMemberRegisterData.acfId"></p>
+        <p><input type="text"  placeholder="First Name" ng-model="acfMemberRegisterData.fname"></p>
+        <p><input type="text"  placeholder="Last Name" ng-model="acfMemberRegisterData.lname"></p>
+        <p><input type="text"  placeholder="Phone Number" ng-model="acfMemberRegisterData.pnumber"></p>
+        <p><input type="text"  placeholder="Username or Email" ng-model="acfMemberRegisterData.email"></p>
+        <p><input type="password" name="password" value="" placeholder="Password" ng-model="acfMemberRegisterData.password"></p>
+   <p class="submit"><input type="submit" value="Register" ng-click="registerACFmember()"></p>
+      </form>
+
+</div>
+<div class="jumbotron text-center">
+  <h2>ACF  Registration</h2>
+      <form>
+        <p><input type="text"  placeholder="ACF Name" ng-model="acfRegisterData.acfName"></p>
+        <p><input type="text"  placeholder="Phone Number" ng-model="acfRegisterData.pnumber"></p>
+        <p><input type="text"  placeholder="Username or Email" ng-model="acfRegisterData.email"></p>
+     <p class="submit"><input type="submit" value="Register" ng-click="registerACF()"></p>
+      </form>
+
+</div>

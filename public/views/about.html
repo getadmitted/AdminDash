@@ -1,0 +1,99 @@
+
+
+<div class="jumbotron text-center">
+	<h2>Edit Student Information</h2>
+
+<button ng-click=loadStudentInfo()>Load Student Information</button>
+	<p> Select Student:{{selectedStudent._id}} </p>
+	<select ng-model="selectedStudent" ng-options="student.local.email for student in studentData">
+					<option value="">Select A Student</option>
+	</select>
+</br></br>
+
+	<form ng-show="clickedStudent">
+        <p>First Name: <input type="text"  placeholder="First Name" ng-model="selectedStudent.local.fname"></p>
+        <p>Last Name: <input type="text"  placeholder="Last Name" ng-model="selectedStudent.local.lname"></p>
+        <p>Phone Number: <input type="text"  placeholder="Phone Number" ng-model="selectedStudent.local.pnumber"></p>
+        <p>Email:<input type="text"  placeholder="Username or Email" ng-model="selectedStudent.local.email"></p>
+        <p>ACF ID:<input type="text"  placeholder="ACF ID" ng-model="selectedStudent.local.acfId"></p>
+      <p class="submit"><input type="submit" value="Update" ng-click="updateStudentInfo()"></p>
+      </form>
+
+	 
+</div>
+
+<div class="jumbotron text-center">
+	<h2>Edit Editor Information</h2>
+
+	<button ng-click=loadEditorInfo()>Load Editor Information</button>
+	<p> Select Editor </p>
+	<select ng-model="selectedEditor" ng-options="editor.local.email for editor in editorData">
+					<option value="">Select An Editor</option>
+	</select>
+</br></br>
+<form ng-show="clickedEditor">
+        <p>First Name: <input type="text"  placeholder="First Name" ng-model="selectedEditor.local.fname"></p>
+        <p>Last Name: <input type="text"  placeholder="Last Name" ng-model="selectedEditor.local.lname"></p>
+        <p>Phone Number: <input type="text"  placeholder="Phone Number" ng-model="selectedEditor.local.pnumber"></p>
+        <p>Email:<input type="text"  placeholder="Username or Email" ng-model="selectedEditor.local.email"></p>
+        <p>Assigned Student List:</p>
+        <p class="submit"><input type="submit" value="Update" ng-click="updateEditorInfo()"></p>
+
+        <ul>
+        	<li ng-repeat='sID in selectedEditor.local.assignedStudents'>{{sID}}<button ng-click="removeStudentFromEditor(sID,selectedEditor._id)">Remove</button></li>
+        </ul>	
+        <p>Add Student to Editor: <input type='text' ng-model="studentToAdd" placeholder="Input Student ID"></p>
+
+      <p class="submit"><input type="submit" value="Add Student" ng-click="addStudentToEditor(studentToAdd,selectedEditor._id)"></p>
+      </form>
+
+	 
+</div>
+
+<div class="jumbotron text-center">
+  <h2>Edit ACF Member Information</h2>
+
+  <button ng-click=loadACFMemberInfo()>Load ACF Member Information</button>
+  <p> Select ACF Member </p>
+  <select ng-model="selectedACFmember" ng-options="acfMember.local.email for acfMember in acfMemberData">
+          <option value="">Select An ACF</option>
+  </select>
+</br></br>
+<form ng-show="clickedACFmember">
+        <p>First Name: <input type="text"  placeholder="First Name" ng-model="selectedACFmember.local.fname"></p>
+        <p>Last Name: <input type="text"  placeholder="Last Name" ng-model="selectedACFmember.local.lname"></p>
+        <p>Phone Number: <input type="text"  placeholder="Phone Number" ng-model="selectedACFmember.local.pnumber"></p>
+        <p>Email:<input type="text"  placeholder="Username or Email" ng-model="selectedACFmember.local.email"></p>
+        
+        <p class="submit"><input type="submit" value="Update" ng-click="updateACFmemberInfo()"></p>
+
+       
+  
+      </form>
+
+   
+</div>
+<div class="jumbotron text-center">
+  <h2>Edit ACF  Information</h2>
+
+  <button ng-click=loadACFInfo()>Load ACF  Information</button>
+  <p> Select ACF  </p>
+  <select ng-model="selectedACF" ng-options="acf.local.email for acf in acfData">
+          <option value="">Select An ACF</option>
+  </select>
+</br></br>
+<form ng-show="clickedACF">
+      {{selectedACF._id}}
+        <p>ACF Name: <input type="text"  placeholder="First Name" ng-model="selectedACF.local.acfName"></p>
+        <p>Phone Number: <input type="text"  placeholder="Phone Number" ng-model="selectedACF.local.pnumber"></p>
+        <p>Email:<input type="text"  placeholder="Username or Email" ng-model="selectedACF.local.email"></p>
+        
+        <p class="submit"><input type="submit" value="Update" ng-click="updateACFInfo()"></p>
+
+       
+  
+      </form>
+
+   
+</div>
+
